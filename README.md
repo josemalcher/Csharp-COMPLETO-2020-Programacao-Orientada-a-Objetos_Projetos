@@ -93,6 +93,11 @@ Funções para valores mínimos e máximos
 - etc...
 
 
+- 17. Restrições e convenções para nomes
+
+
+
+
 
 [Voltar ao Índice](#indice)
 
