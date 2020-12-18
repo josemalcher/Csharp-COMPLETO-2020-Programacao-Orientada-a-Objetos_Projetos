@@ -1,0 +1,7 @@
+﻿# IntelliJ project files
+.idea
+*.iml
+out
+gen
+/SaidaDeDados/bin/*
+/SaidaDeDados/obj/*
