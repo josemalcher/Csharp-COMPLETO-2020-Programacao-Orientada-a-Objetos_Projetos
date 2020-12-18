@@ -96,6 +96,24 @@ Funções para valores mínimos e máximos
 - 17. Restrições e convenções para nomes
 - 18. Saída de dados em C#
 
+- 20. Conversão implícita e casting
+
+```csharp
+double a;
+float b;
+a = 5.1;
+b = (float)a;
+Console.WriteLine(b);
+```
+
+```csharp
+double a;
+int b;
+a = 5.1;
+b = (int)a;
+Console.WriteLine(b);
+
+```
 
 
 
