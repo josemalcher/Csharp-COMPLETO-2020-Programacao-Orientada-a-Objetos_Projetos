@@ -5,3 +5,9 @@ out
 gen
 /SaidaDeDados/bin/*
 /SaidaDeDados/obj/*
+
+/EntradaDeDados/bin/*
+/EntradaDeDados/obj/*
+
+/EntradaDeDados02/bin/*
+/EntradaDeDados02/obj/*

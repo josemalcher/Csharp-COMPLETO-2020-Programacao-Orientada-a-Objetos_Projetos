@@ -115,6 +115,122 @@ Console.WriteLine(b);
 
 ```
 
+- 21. Operadores aritméticos
+
+```csharp
+int n1 = 3 + 4 * 2;
+int n2 = (3 + 4) * 2;
+int n3 = 17 % 3;
+double n4 = 10.0 / 8.0;
+double a = 1.0, b = -3.0, c = -4.0;
+double delta = Math.Pow(b, 2.0) - 4.0 * a * c;
+double x1 = (-b + Math.Sqrt(delta)) / (2.0 * a);
+double x2 = (-b - Math.Sqrt(delta)) / (2.0 * a);
+Console.WriteLine(n1);
+Console.WriteLine(n2);
+Console.WriteLine(n3);
+Console.WriteLine(n4);
+Console.WriteLine(delta);
+Console.WriteLine(x1);
+Console.WriteLine(x2);
+```
+
+- 22. Entrada de dados em C# - PARTE 1
+
+```csharp
+using System;
+using System.Globalization;
+
+namespace EntradaDeDados
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string x;
+            int y;
+            double z;
+            char w;            
+
+            x = Console.ReadLine();
+            y = int.Parse(Console.ReadLine());
+            z = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            w = char.Parse(Console.ReadLine());
+
+            Console.WriteLine(x);
+            Console.WriteLine(y);
+            Console.WriteLine(z);
+            Console.WriteLine(w);
+
+            Console.ReadLine();
+        }
+    }
+}
+```
+
+- 23. Entrada de dados em C# - PARTE 2
+
+```csharp
+using System;
+using System.Globalization;
+
+namespace EntradaDeDados02
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n1 = int.Parse(Console.ReadLine());
+            char ch = char.Parse(Console.ReadLine());
+            double n2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            string[] vet = Console.ReadLine().Split(' ');
+            string nome = vet[0];
+            char sexo = char.Parse(vet[1]);
+            int idade = int.Parse(vet[2]);
+            double altura = double.Parse(vet[3], CultureInfo.InvariantCulture);
+            Console.WriteLine("Você digitou:");
+            Console.WriteLine(n1);
+            Console.WriteLine(ch);
+            Console.WriteLine(n2.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine(nome);
+            Console.WriteLine(sexo);
+            Console.WriteLine(idade);
+            Console.WriteLine(altura.ToString("F2", CultureInfo.InvariantCulture));
+        }
+    }
+}
+
+```
+
+- Exercício de fixação
+
+```csharp
+using System;
+using System.Globalization;
+namespace Course {
+    class Program {
+        static void Main(string[] args) {
+            Console.WriteLine("Entre com seu nome completo:");
+            string fullName = Console.ReadLine();
+            Console.WriteLine("Quantos quartos tem na sua casa?");
+            int bedrooms = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter product price:");
+            double price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine("Entre seu último nome, idade e altura (mesma linha):");
+            string[] vect = Console.ReadLine().Split(' ');
+            string lastName = vect[0];
+            int age = int.Parse(vect[1]);
+            double height = double.Parse(vect[2], CultureInfo.InvariantCulture);
+            Console.WriteLine(fullName);
+            Console.WriteLine(bedrooms);
+            Console.WriteLine(price.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine(lastName);
+            Console.WriteLine(age);
+            Console.WriteLine(height.ToString("F2", CultureInfo.InvariantCulture));
+        }
+    }
+}
+```
 
 
 [Voltar ao Índice](#indice)
