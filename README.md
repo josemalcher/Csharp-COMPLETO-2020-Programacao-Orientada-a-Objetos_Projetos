@@ -328,6 +328,10 @@ namespace curso {
 
 ```
 
+- 30. Funções (sintaxe)
+
+
+
 
 [Voltar ao Índice](#indice)
 
