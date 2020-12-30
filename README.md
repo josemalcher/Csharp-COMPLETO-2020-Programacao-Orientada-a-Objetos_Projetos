@@ -383,6 +383,137 @@ class Program {
 ## <a name="parte4">4 - Classes, atributos, métodos, membros estáticos</a>
 
 
+- 38. Resolvendo um problema sem orientação a objetos
+
+```csharp
+using System;
+using System.Globalization;
+namespace Course {
+    class Program {
+    static void Main(string[] args) {
+        double xA, xB, xC, yA, yB, yC;
+        Console.WriteLine("Entre com as medidas do triângulo X:");
+        xA = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        xB = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        xC = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        Console.WriteLine("Entre com as medidas do triângulo Y:");
+        yA = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        yB = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        yC = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        double p = (xA + xB + xC) / 2.0;
+        double areaX = Math.Sqrt(p * (p - xA) * (p - xB) * (p - xC));
+        p = (yA + yB + yC) / 2.0;
+        double areaY = Math.Sqrt(p * (p - yA) * (p - yB) * (p - yC));
+        Console.WriteLine("Área de X = " + areaX.ToString("F4", CultureInfo.InvariantCulture));
+        Console.WriteLine("Área de Y = " + areaY.ToString("F4", CultureInfo.InvariantCulture));
+        if (areaX > areaY) {
+            Console.WriteLine("Maior área: X");
+            }
+                else {
+                Console.WriteLine("Maior área: Y");
+            }
+        }
+    }
+}
+```
+
+- 43. Object e ToString
+- 44. Terminando de construir o programa
+
+```csharp
+using System.Globalization;
+namespace Course {
+class Produto {
+    public string Nome;
+    public double Preco;
+    public int Quantidade;
+    public double ValorTotalEmEstoque() {
+        return Preco * Quantidade;
+    }
+    public void AdicionarProdutos(int quantidade) {
+        Quantidade += quantidade;
+    }
+    public void RemoverProdutos(int quantidade) {
+        Quantidade -= quantidade;
+    }
+    public override string ToString() {
+        return Nome
+        + ", $ "
+        + Preco.ToString("F2", CultureInfo.InvariantCulture)
+        + ", "
+        + Quantidade
+        + " unidades, Total: $ "
+        + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
+        }
+    }
+}
+```
+
+```csharp
+using System;
+using System.Globalization;
+namespace Course {
+    class Program {
+        static void Main(string[] args) {
+            Produto p = new Produto();
+            Console.WriteLine("Entre os dados do produto:");
+            Console.Write("Nome: ");
+            p.Nome = Console.ReadLine();
+            Console.Write("Preço: ");
+            p.Preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("Quantidade no estoque: ");
+            p.Quantidade = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine("Dados do produto: " + p);
+            Console.WriteLine();
+            Console.Write("Digite o número de produtos a ser adicionado ao estoque: ");
+            
+            int qte = int.Parse(Console.ReadLine());
+            
+            p.AdicionarProdutos(qte);
+            Console.WriteLine();
+            Console.WriteLine("Dados atualizados: " + p);
+            Console.WriteLine();
+            Console.Write("Digite o número de produtos a ser removido do estoque: ");
+            qte = int.Parse(Console.ReadLine());
+            
+            p.RemoverProdutos(qte);
+            Console.WriteLine();
+            Console.WriteLine("Dados atualizados: " + p);
+        }
+    }
+}
+```
+
+- 47. Membros estáticos - PARTE 2
+
+```csharp
+namespace Course {
+    class Calculadora {
+        public static double Pi = 3.14;
+        public static double Circunferencia(double r) {
+            return 2.0 * Pi * r;
+        }
+        public static double Volume(double r) {
+            return 4.0 / 3.0 * Pi * r * r * r;
+        }
+    }
+}
+```
+
+```csharp
+Console.Write("Entre o valor do raio: ");
+double raio = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+double circ = Calculadora.Circunferencia(raio);
+double volume = Calculadora.Volume(raio);
+
+Console.WriteLine("Circunferência: " + circ.ToString("F2", CultureInfo.InvariantCulture));
+Console.WriteLine("Volume: " + volume.ToString("F2", CultureInfo.InvariantCulture));
+Console.WriteLine("Valor de PI: " + Calculadora.Pi.ToString("F2",
+CultureInfo.InvariantCulture));
+```
+
 
 [Voltar ao Índice](#indice)
 
