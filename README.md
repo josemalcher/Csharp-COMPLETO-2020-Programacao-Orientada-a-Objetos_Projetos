@@ -523,6 +523,13 @@ CultureInfo.InvariantCulture));
 ## <a name="parte5">5 - Construtores, palavra this, sobrecarga, encapsulamento</a>
 
 - 51. Construtores
+  - É uma operação especial da classe, que executa no momento da instanciação do objeto
+  - Usos comuns:
+  - Iniciar valores dos atributos
+  - Permitir ou obrigar que o objeto receba dados / dependências no momento de sua instanciação (injeção de dependência)
+  - Se um construtor customizado não for especificado, a classe disponibiliza o construtor padrão:
+  - Produto p = new Produto();
+  - É possível especificar mais de um construtor na mesma classe (sobrecarga)
 
 ```csharp
 using System.Globalization;
@@ -585,113 +592,38 @@ namespace Course {
     }
 }
 ```
-
-
-- 52. Sobrecarga
-
-```csharp
-public Produto() {
-}
-public Produto(string nome, double preco, int quantidade) {
-    Nome = nome;
-    Preco = preco;
-    Quantidade = quantidade;
-}
-public Produto(string nome, double preco) {
-    Nome = nome;
-    Preco = preco;
-    Quantidade = 0;
-}
-```` 
-
-- 53. Sintaxe alternativa para inicializar valores
-
-```csharp
-Produto p = new Produto {
-    Nome = "TV",
-    Preco = 900.0,
-    Quantidade = 0
-};
-Produto p2 = new Produto() {
-    Nome = "TV",
-    Preco = 900.0,
-    Quantidade = 0
-};
-```
-
-- 54. Palavra this 
-
-Referenciar outro construtor em um construtor
+![Construtor Melhorias Código Anterior](/5-Secao-Construtores-palavra-this-sobrecarga-encapsulamento/img/construtor-1.png)
 
 ```csharp
 using System.Globalization;
-namespace Course {
-    class Produto {
-        public string Nome;
+
+namespace Contrutores
+{
+    public class Produto
+    {
+       public string Nome;
         public double Preco;
         public int Quantidade;
-
-        public Produto() {
-            Quantidade = 0;
-        }
-        public Produto(string nome, double preco) : this() {
+        public Produto(string nome, double preco, int quantidade) {
             Nome = nome;
             Preco = preco;
-        }
-        public Produto(string nome, double preco, int quantidade) : this(nome, preco) {
             Quantidade = quantidade;
         }
-
-
-    // (...)
-
-```
-
-- 55. Encapsulamento
-
-```csharp
-using System.Globalization;
-namespace Course {
-    class Produto {
-        private string _nome;
-        private double _preco;
-        private int _quantidade;
-        public Produto() {
-        }
-        public Produto(string nome, double preco, int quantidade) {
-            _nome = nome;
-            _preco = preco;
-            _quantidade = quantidade;
-        }
-        public string GetNome() {
-            return _nome;
-        }
-        public void SetNome(string nome) {
-            if (nome != null && nome.Length > 1) {
-              _nome = nome;
-            }
-        }
-        public double GetPreco() {
-          return _preco;
-        }
-        public int GetQuantidade() {
-          return _quantidade;
-        }
         public double ValorTotalEmEstoque() {
-          return _preco * _quantidade;
+         return Preco * Quantidade;
         }
         public void AdicionarProdutos(int quantidade) {
-         _quantidade += quantidade;
+            Quantidade += quantidade;
         }
         public void RemoverProdutos(int quantidade) {
-          _quantidade -= quantidade;
+        Quantidade -= quantidade;
         }
         public override string ToString() {
-            return _nome
+            return Nome
             + ", $ "
-            + _preco.ToString("F2", CultureInfo.InvariantCulture)
+            + Preco.ToString("F2", CultureInfo.InvariantCulture)
             + ", "
-            + _quantidade
+            + Quantidade
             + " unidades, Total: $ "
             + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
         }
@@ -699,104 +631,74 @@ namespace Course {
 }
 ```
 
+```csharp
+using System;
+using System.Globalization;
+
+namespace Contrutores
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Entre os dados do produto:");
+            Console.Write("Nome: ");
+            string nome = Console.ReadLine();
+            Console.Write("Preço: ");
+            double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("Quantidade no estoque: ");
+            int quantidade = int.Parse(Console.ReadLine());
+            Produto p = new Produto(nome, preco, quantidade);
+            Console.WriteLine();
+            Console.WriteLine("Dados do produto: " + p);
+            Console.WriteLine();
+            Console.Write("Digite o número de produtos a ser adicionado ao estoque: ");
+            int qte = int.Parse(Console.ReadLine());
+            p.AdicionarProdutos(qte);
+            Console.WriteLine();
+            Console.WriteLine("Dados atualizados: " + p);
+            Console.WriteLine();
+            Console.Write("Digite o número de produtos a ser removido do estoque: ");
+            qte = int.Parse(Console.ReadLine());
+            p.RemoverProdutos(qte);
+            Console.WriteLine();
+            Console.WriteLine("Dados atualizados: " + p);
+        }
+    }
+}
+
+```
+
+- 52. Sobrecarga
+
+```csharp
+
+```
+
+- 54. Palavra this 
+
+Referenciar outro construtor em um construtor
+
+```csharp
+
+```
+
+- 55. Encapsulamento
+
+```csharp
+
+```
+
 - 56. Properties
 
 ```csharp
 
-using System.Globalization;
-namespace Course {
-    class Produto {
-        private string _nome;
-        private double _preco;
-        private int _quantidade;
-        public Produto() {
-        }
-        public Produto(string nome, double preco, int quantidade) {
-            _nome = nome;
-            _preco = preco;
-            _quantidade = quantidade;
-        }
-        public string Nome {
-            get { return _nome; }
-            set {
-                if (value != null && value.Length > 1) {
-                    _nome = value;
-                }
-            }
-        }
-        public double Preco {
-            get { return _preco; }
-        }
-        public int Quantidade {
-            get { return _quantidade; }
-        }
-        public double ValorTotalEmEstoque {
-            get { return _preco * _quantidade; }
-        }
-        public void AdicionarProdutos(int quantidade) {
-            _quantidade += quantidade;
-        }
-        public void RemoverProdutos(int quantidade) {
-            _quantidade -= quantidade;
-        }
-        public override string ToString() {
-            return _nome
-            + ", $ "
-            + _preco.ToString("F2", CultureInfo.InvariantCulture)
-            + ", "
-            + _quantidade
-            + " unidades, Total: $ "
-            + ValorTotalEmEstoque.ToString("F2", CultureInfo.InvariantCulture);
-        }
-    }
-}
 ```
 
 - 57. Auto Properties
 
 ```csharp
 
-using System.Globalization;
-namespace Course {
-    class Produto {
-        private string _nome;
-        public double Preco { get; private set; }
-        public double Quantidade { get; set; }
-        public Produto() {
-        }
-        public Produto(string nome, double preco, int quantidade) {
-            _nome = nome;
-            Preco = preco;
-            Quantidade = quantidade;
-        }
-        public string Nome {
-            get { return _nome; }
-            set {
-                if (value != null && value.Length > 1) {
-                _nome = value;
-                }
-            }
-        }
-        public double ValorTotalEmEstoque {
-            get { return Preco * Quantidade; }
-        }
-        public void AdicionarProdutos(int quantidade) {
-            Quantidade += quantidade;
-        }
-        public void RemoverProdutos(int quantidade) {
-            Quantidade -= quantidade;
-        }
-        public override string ToString() {
-            return _nome
-            + ", $ "
-            + Preco.ToString("F2", CultureInfo.InvariantCulture)
-            + ", "
-            + Quantidade
-            + " unidades, Total: $ "
-            + ValorTotalEmEstoque.ToString("F2", CultureInfo.InvariantCulture);
-        }
-    }
-}
 ```
 
 - 58. Ordem sugerida para implementação de membros de classe
@@ -806,7 +708,6 @@ namespace Course {
 • Construtores
 • Propriedades customizadas
 • Outros métodos da classe
-
 
 
 [Voltar ao Índice](#indice)
