@@ -808,15 +808,102 @@ namespace Course {
 ```
 
 - 56. Properties
+  - São definições de métodos encapsulados, porém expondo uma sintaxe similar à de atributos e não de métodos
+  - https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/classes-and-structs/properties
+  - Uma propriedade é um membro que oferece um mecanismo flexível para ler, gravar ou calcular o valor de um campo particular. As propriedades podem ser usadas como se fossem atributos públicos, mas na verdade elas são métodos especiais chamados "acessadores". Isso permite que os dados sejam acessados facilmente e ainda ajuda a promover a segurança e a flexibilidade dos métodos.
 
 ```csharp
-
+    private string _nome;
+    private double _preco;
+    private int _quantidade;
+    public Produto() {
+    }
+    public Produto(string nome, double preco, int quantidade) {
+        _nome = nome;
+        _preco = preco;
+        _quantidade = quantidade;
+    }
+    public string Nome {
+        get { return _nome; }
+        set {
+            if (value != null && value.Length > 1) { // value = parametro
+            _nome = value;
+            }
+        }
+    }
+    public double Preco {
+        get { return _preco; }
+    }
+    public int Quantidade {
+        get { return _quantidade; }
+    }
+    public double ValorTotalEmEstoque {
+        get { return _preco * _quantidade; }
+    }
+    public void AdicionarProdutos(int quantidade) {
+        _quantidade += quantidade;
+    }
+    public void RemoverProdutos(int quantidade) {
+        _quantidade -= quantidade;
+    }
+    public override string ToString() {
+        return _nome
+        + ", $ "
+        + _preco.ToString("F2", CultureInfo.InvariantCulture)
+        + ", "
+        + _quantidade
+        + " unidades, Total: $ "
+        + ValorTotalEmEstoque.ToString("F2", CultureInfo.InvariantCulture);
+    }
 ```
 
 - 57. Auto Properties
+  - É uma forma simplificada de se declarar propriedades que não necessitam lógicas particulares para as operações get e set.
+  - https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties
+
 
 ```csharp
-
+using System.Globalization;
+namespace Course {
+    class Produto {
+        private string _nome;
+        public double Preco { get; private set; }
+        public double Quantidade { get; set; }
+        public Produto() {
+        }
+        public Produto(string nome, double preco, int quantidade) {
+            _nome = nome;
+            Preco = preco;
+            Quantidade = quantidade;
+        }
+        public string Nome {
+            get { return _nome; }
+            set {
+                if (value != null && value.Length > 1) {
+                    _nome = value;
+                }
+            }
+        }
+        public double ValorTotalEmEstoque {
+            get { return Preco * Quantidade; }
+        }
+        public void AdicionarProdutos(int quantidade) {
+            Quantidade += quantidade;
+        }
+        public void RemoverProdutos(int quantidade) {
+            Quantidade -= quantidade;
+        }
+        public override string ToString() {
+            return _nome
+            + ", $ "
+            + Preco.ToString("F2", CultureInfo.InvariantCulture)
+            + ", "
+            + Quantidade
+            + " unidades, Total: $ "
+            + ValorTotalEmEstoque.ToString("F2", CultureInfo.InvariantCulture);
+        }
+    }
+}
 ```
 
 - 58. Ordem sugerida para implementação de membros de classe
