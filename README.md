@@ -49,9 +49,9 @@ Curso mais didático e completo de C# e OO. Projetos com UML, ASP.NET, Entity Fr
 
 #### 15. Tipos básicos de dados em C# - PARTE 1
 
-![Tipos](3-Secao-Recaptulacao-logica\img\01-tipos-c-sharp.png)
+![Tipos](/3-Secao-Recaptulacao-logica/img/01-tipos-c-sharp.png)
 
-![Tipos String e Object](3-Secao-Recaptulacao-logica\img\02-tipos-string.png)
+![Tipos String e Object](/3-Secao-Recaptulacao-logica/img/02-tipos-string.png)
 
 
 - Demostrações
@@ -670,17 +670,82 @@ namespace Contrutores
 ```
 
 - 52. Sobrecarga
+  - É um recurso que uma classe possui de oferecer mais de uma operação com o mesmo nome, porém com  diferentes listas de parâmetros.
+- Proposta de melhoria
+  - Vamos criar um construtor opcional, o qual recebe apenas nome e preço do produto. A quantidade em estoque deste novo produto, por padrão, deverá então ser iniciada com o valor zero.
+  - Nota: é possível também incluir um construtor padrão (sem parâmetros)
 
 ```csharp
+  public Produto(string nome, double preco, int quantidade) {
+            Nome = nome;
+            Preco = preco;
+            Quantidade = quantidade;
+        }
+        public Produto(string nome, double preco){
+            Nome = nome;
+            Preco - preco;
+            Quantidade = 0; // por padrão é adotado Zero 
+        }
 
+```
+
+- 53. Sintaxe alternativa para inicializar valores
+
+```csharp
+public Produto() {
+}
+public Produto(string nome, double preco, int quantidade) {
+    Nome = nome;
+    Preco = preco;
+    Quantidade = quantidade;
+}
+```
+
+```csharp
+Produto p = new Produto {
+    Nome = "TV",
+    Preco = 900.0,
+    Quantidade = 0
+};
+Produto p2 = new Produto() {
+    Nome = "TV",
+    Preco = 900.0,
+    Quantidade = 0
+};
+// Isso funciona mesmo se a classe não possuir construtores implementados
 ```
 
 - 54. Palavra this 
 
-Referenciar outro construtor em um construtor
+- É uma referência para o próprio objeto
+- Usos comuns:
+  - Diferenciar atributos de variáveis locais (Java)
+  - Referenciar outro construtor em um construtor
+  - Passar o próprio objeto como argumento na chamada de um método ou construtor
+
+![This](/5-Secao-Construtores-palavra-this-sobrecarga-encapsulamento/img/this.png)
+
+- Referenciar outro construtor em um construtor
 
 ```csharp
+public Produto() {
+    Quantidade = 0;
+}
+public Produto(string nome, double preco) : this() {
+    Nome = nome;
+    Preco = preco;
+}
+public Produto(string nome, double preco, int quantidade) : this(nome, preco) {
+    Quantidade = quantidade;
+}
+```
+- Passar o próprio objeto como argumento na chamada de um método ou construtor
 
+```csharp
+class ChessMatch {
+(...)
+    PlaceNewPiece('e', 1, new King(board, Color.White, this));
+(...)
 ```
 
 - 55. Encapsulamento
@@ -702,12 +767,12 @@ Referenciar outro construtor em um construtor
 ```
 
 - 58. Ordem sugerida para implementação de membros de classe
+  - Atributos privados
+  - Propriedades autoimplementadas
+  - Construtores
+  - Propriedades customizadas
+  - Outros métodos da classe
 
-• Atributos privados
-• Propriedades autoimplementadas
-• Construtores
-• Propriedades customizadas
-• Outros métodos da classe
 
 
 [Voltar ao Índice](#indice)
