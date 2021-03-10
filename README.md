@@ -1520,9 +1520,103 @@ O modificador out é similar ao ref (faz o parâmetro ser uma referência para a
 
 
 - 74 Boxing e unboxing
+
+Boxing - É o processo de conversão de um objeto tipo valor para um objeto tipo referência compatível
+
+unboxing - É o processo de conversão de um objeto tipo referência para um objeto tipo valor compatível
+
+![](6-Comportamento-de-memoria-arrays-listas/img/boxing-umboxing.png)
+
+
 - 75 Sintaxe opcional: laço foreach
+
+Sintaxe opcional e simplificada para percorrer coleções
+
+Leitura: "para cada objeto 'obj' contido em vect, faça:"
+
+```csharp
+string[] vect = new string[] { "Maria", "Bob", "Alex"};
+foreach (string obj in vect) {
+    Console.WriteLine(obj);
+}
+```
+
 - 76 Listas (List) - PARTE 1
+
+  - https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx
+
+![Listas](6-Comportamento-de-memoria-arrays-listas/img/listas_1.png)
+
+
 - 77 Listas (List) - PARTE 2
+
+- Inserir elemento na lista: *Add*, *Insert*
+- Tamanho da lista: *Count*
+- Encontrar primeiro ou último elementos da lista que satisfaça um predicado:
+*list.Find*, *list.FindLast*
+- Encontrar primeira ou última posição de elemento da lista que satisfaça um predicado: *list.FindIndex, list.FindLastIndex*
+- Filtrar a lista com base em um predicado: *list.FindAll*
+- Remover elementos da lista: *Remove, RemoveAll, RemoveAt, RemoveRange*
+- Assuntos pendentes:
+  - Generics
+  - Predicados (lambda)
+
+```csharp
+using System;
+using System.Collections.Generic;
+
+namespace list1
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      List<string> list = new List<string>();
+      list.Add("Maria");
+      list.Add("Alex");
+      list.Add("Bob");
+      list.Add("Anna");
+      list.Insert(2, "Marco");
+      foreach (string obj in list)
+      {
+        Console.WriteLine(obj);
+      }
+      Console.WriteLine("List count: " + list.Count);
+      string s1 = list.Find(x => x[0] == 'A');
+      Console.WriteLine("First 'A': " + s1);
+      string s2 = list.FindLast(x => x[0] == 'A');
+      Console.WriteLine("Last 'A': " + s2);
+      int pos1 = list.FindIndex(x => x[0] == 'A');
+      Console.WriteLine("First position 'A': " + pos1);
+      int pos2 = list.FindLastIndex(x => x[0] == 'A');
+      Console.WriteLine("Last position 'A': " + pos2);
+      List<string> list2 = list.FindAll(x => x.Length == 5);
+      Console.WriteLine("---------------------");
+      foreach (string obj in list2)
+      {
+        Console.WriteLine(obj);
+      }
+      list.Remove("Alex");
+      Console.WriteLine("---------------------");
+      foreach (string obj in list)
+      {
+        Console.WriteLine(obj);
+      }
+      list.RemoveAll(x => x[0] == 'M');
+      Console.WriteLine("---------------------");
+      foreach (string obj in list)
+      {
+        Console.WriteLine(obj);
+      }
+    }
+  }
+}
+
+```
+
+--
+
+
 - 78 Exercício de fixação (listas)
 - 79 Matrizes
 - 80 Exercício resolvido (matrizes)
