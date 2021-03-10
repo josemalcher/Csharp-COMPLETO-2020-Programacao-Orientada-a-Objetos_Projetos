@@ -1086,7 +1086,98 @@ namespace Exercicio60
 
 ## <a name="parte6">6 - Comportamento de memória, arrays, listas</a>
 
+- 63. Visão geral do capítulo
+- 64. Material de apoio do capítulo
+  - [6-Comportamento-de-memoria-arrays-listas/00-materiais](/6-Comportamento-de-memoria-arrays-listas/00-materiais)
+- 65. Aviso sobre conteúdo antigo
+- 66. Tipos referência e tipos valor
 
+Variáveis cujo tipo são classes não devem ser entendidas como caixas, mas sim “tentáculos” (ponteiros) para caixas
+
+![Tipos Referências](6-Comportamento-de-memoria-arrays-listas/img/comportamentos_variaveis_1.png)
+
+Tipos referência aceitam o valor "null", que indica que a variável aponta pra ninguém.
+
+![Tipos de referência](6-Comportamento-de-memoria-arrays-listas/img/comportamentos_variaveis_2.png)
+
+**Structs são tipos valor**
+
+A linguagem C# possui também tipos valor, que são os "structs". Structs são CAIXAS e não ponteiros.
+
+![Struct](6-Comportamento-de-memoria-arrays-listas/img/structs_1.png)
+
+![Struct 2](6-Comportamento-de-memoria-arrays-listas/img/structs_2.png)
+
+É possível criar seus próprios structs
+
+```csharp
+namespace Course {
+    struct Point {
+        public double X, Y;
+        public override string ToString() {
+            return "(" + X + "," + Y + ")";
+        }
+    }
+}
+```
+
+```csharp
+    Point p;
+    Console.WriteLine(p); // erro: variável não atribuida
+    p.X = 10;
+    p.Y = 20;
+    Console.WriteLine(p);
+
+    p = new Point();
+    Console.WriteLine(p);
+```
+
+**Valores padrão**
+
+  - Quando alocamos (new) qualquer tipo estruturado (classe, struct, array), são atribuídos valores padrão aos seus elementos
+  - números: 0
+  - bool: False
+  - char: caractere código 0
+  - objeto: null
+  - Lembrando: uma variável apenas declarada, mas não instanciada, inicia em estado "não atribuída", e o próprio compilador não permite que ela seja acessada.
+
+**Tipos referência vs. tipos valor**
+
+![Referências vs. Valor](6-Comportamento-de-memoria-arrays-listas/img/tipos_referencias_valor.png)
+
+
+- 67. Desalocação de memória - garbage collector e escopo local
+
+**Garbage collector**
+
+- É um processo que automatiza o gerenciamento de memória de um programa em execução
+- O garbage collector monitora os objetos alocados dinamicamente pelo programa (no heap), desalocando aqueles que não estão mais sendo utilizados.
+
+![Garbage Collector](6-Comportamento-de-memoria-arrays-listas/img/garbageCollector_1.png)
+
+![Garbage Collector](6-Comportamento-de-memoria-arrays-listas/img/garbageCollector_2.png)
+
+![Garbage Collector](6-Comportamento-de-memoria-arrays-listas/img/garbageCollector_3.png)
+
+- *Objetos alocados dinamicamente, quando não possuem mais referência para eles, serão desalocados pelo garbage collector*
+- *Variáveis locais são desalocadas imediatamente assim que seu escopo local sai de execução*
+
+
+- 68. Nullable
+- 69. Vetores - PARTE 1
+- 70. Vetores - PARTE 2
+- 71. Exercício de fixação (vetores)
+- 72. Modificador de parâmetros params
+- 73. Modificadores de parâmetros ref e out
+- 74. Boxing e unboxing
+- 75. Sintaxe opcional: laço foreach
+- 76. Listas (List) - PARTE 1
+- 77. Listas (List) - PARTE 2
+- 78. Exercício de fixação (listas)
+- 79. Matrizes
+- 80. Exercício resolvido (matrizes)
+- 81. Exercício de fixação (matrizes)
+- 82. Conjuntos (aviso)
 
 [Voltar ao Índice](#indice)
 
