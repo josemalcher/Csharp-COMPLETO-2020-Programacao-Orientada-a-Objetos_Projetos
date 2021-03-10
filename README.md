@@ -1418,11 +1418,107 @@ namespace Exer1
 }
 
 ```
-
-
-
 - 72 Modificador de parâmetros params
+
+Suponha que se queira uma calculadora para calcular a soma de uma quantidade variável de valores. Solução ruim usando sobrecarga:
+
+```csharp
+namespace Course {
+    class Calculator {
+        public static int Sum(int n1, int n2) {
+            return n1 + n2;
+        }
+        public static int Sum(int n1, int n2, int n3) {
+            return n1 + n2 + n3;
+        }
+        public static int Sum(int n1, int n2, int n3, int n4) {
+            return n1 + n2 + n3 + n4;
+        }
+    }
+}
+```
+
+*Solução com vetor:*
+
+```csharp
+namespace Course {
+    class Calculator {
+        public static int Sum(int[] numbers) {
+            int sum = 0;
+            for (int i=0; i<numbers.Length; i++) {
+                sum += numbers[i];
+            }
+            return sum;
+        }
+    }
+}
+```
+
+```csharp
+    int result = Calculator.Sum(new int[] { 10, 20, 30, 40 });
+```
+
+**Solução com modificador params:**
+
+```csharp
+namespace Course {
+    class Calculator {
+        public static int Sum(params int[] numbers) {
+            int sum = 0;
+            for (int i=0; i<numbers.Length; i++) {
+            sum += numbers[i];
+            }
+            return sum;
+        }
+    }
+}
+```
+
+```csharp
+    int result = Calculator.Sum(10, 20, 30, 40);
+```
+
 - 73 Modificadores de parâmetros ref e out
+
+- Modificador ref
+Suponha que se queira uma calculadora com uma operação para triplicar o valor de um número passado como parâmetro. A seguir uma solução que não funciona:
+
+```csharp
+class Calculator {
+    public static void Triple(int x) {
+        x = x * 3;
+    }
+}
+```
+
+```csharp
+class Program {
+static void Main(string[] args) {
+    int a = 10;
+    Calculator.Triple(a);
+    Console.WriteLine(a);
+```
+
+![](6-Comportamento-de-memoria-arrays-listas/img/ref_1.png)
+
+![](6-Comportamento-de-memoria-arrays-listas/img/ref_2.png)
+
+- Modificador out
+
+O modificador out é similar ao ref (faz o parâmetro ser uma referência para a variável original), mas não exige que a variável original seja iniciada.
+
+![out](6-Comportamento-de-memoria-arrays-listas/img/out_1.png)
+
+
+*Considerações sobre ref e out*
+
+- Diferença:
+- A variável passada como parâmetro ref DEVE ter sido iniciada
+- A variável passada como parâmetro out não precisa ter sido iniciada
+- Conclusão: ambos são muito similares, mas ref é uma forma de fazer o compilador obrigar o usuário a iniciar a variável.
+- Nota: *ambos são considerados "code smells" (design ruim) e devem ser evitados.*
+
+
 - 74 Boxing e unboxing
 - 75 Sintaxe opcional: laço foreach
 - 76 Listas (List) - PARTE 1
