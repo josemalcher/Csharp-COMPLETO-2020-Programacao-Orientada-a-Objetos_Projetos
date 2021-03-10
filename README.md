@@ -2,7 +2,7 @@
 
 https://www.udemy.com/course/programacao-orientada-a-objetos-csharp/
 
-Curso mais didático e completo de C# e OO. Projetos com UML, ASP.NET, Entity Framework, LINQ, Lambda e muito mais
+Curso mais didático e completo de C# e OO Projetos com UML, ASP.NET, Entity Framework, LINQ, Lambda e muito mais
 
 ## <a name="indice">Índice</a>
 
@@ -47,7 +47,7 @@ Curso mais didático e completo de C# e OO. Projetos com UML, ASP.NET, Entity Fr
 
 ## <a name="parte3">3 - Recapitulação de Lógica de Programação usando C#</a>
 
-#### 15. Tipos básicos de dados em C# - PARTE 1
+#### 15 Tipos básicos de dados em C# - PARTE 1
 
 ![Tipos](/3-Secao-Recaptulacao-logica/img/01-tipos-c-sharp.png)
 
@@ -93,10 +93,10 @@ Funções para valores mínimos e máximos
 - etc...
 
 
-- 17. Restrições e convenções para nomes
-- 18. Saída de dados em C#
+- 17 Restrições e convenções para nomes
+- 18 Saída de dados em C#
 
-- 20. Conversão implícita e casting
+- 20 Conversão implícita e casting
 
 ```csharp
 double a;
@@ -115,7 +115,7 @@ Console.WriteLine(b);
 
 ```
 
-- 21. Operadores aritméticos
+- 21 Operadores aritméticos
 
 ```csharp
 int n1 = 3 + 4 * 2;
@@ -135,7 +135,7 @@ Console.WriteLine(x1);
 Console.WriteLine(x2);
 ```
 
-- 22. Entrada de dados em C# - PARTE 1
+- 22 Entrada de dados em C# - PARTE 1
 
 ```csharp
 using System;
@@ -168,7 +168,7 @@ namespace EntradaDeDados
 }
 ```
 
-- 23. Entrada de dados em C# - PARTE 2
+- 23 Entrada de dados em C# - PARTE 2
 
 ```csharp
 using System;
@@ -232,7 +232,7 @@ namespace Course {
 }
 ```
 
-- 25. Operadores comparativos
+- 25 Operadores comparativos
 
 ```csharp
 int a = 10;
@@ -255,7 +255,7 @@ Console.WriteLine(c7);
 Console.WriteLine(c8);
 ```
 
-- 26. Operadores lógicos
+- 26 Operadores lógicos
 
 ```csharp
 bool c1 = 2 > 3 || 4 != 5; // true
@@ -269,7 +269,7 @@ Console.WriteLine(c3);
 Console.WriteLine(c4);
 ```
 
-- 27. Estrutura condicional (if-else)
+- 27 Estrutura condicional (if-else)
 
 ```csharp
 using System;
@@ -328,10 +328,10 @@ namespace curso {
 
 ```
 
-- 30. Funções (sintaxe)
+- 30 Funções (sintaxe)
 
 
-- 32. Estrutura repetitiva enquanto (while)
+- 32 Estrutura repetitiva enquanto (while)
 
 ```csharp
 using System;
@@ -383,7 +383,7 @@ class Program {
 ## <a name="parte4">4 - Classes, atributos, métodos, membros estáticos</a>
 
 
-- 38. Resolvendo um problema sem orientação a objetos
+- 38 Resolvendo um problema sem orientação a objetos
 
 ```csharp
 using System;
@@ -417,8 +417,8 @@ namespace Course {
 }
 ```
 
-- 43. Object e ToString
-- 44. Terminando de construir o programa
+- 43 Object e ToString
+- 44 Terminando de construir o programa
 
 ```csharp
 using System.Globalization;
@@ -485,7 +485,7 @@ namespace Course {
 }
 ```
 
-- 47. Membros estáticos - PARTE 2
+- 47 Membros estáticos - PARTE 2
 
 ```csharp
 namespace Course {
@@ -522,7 +522,7 @@ CultureInfo.InvariantCulture));
 
 ## <a name="parte5">5 - Construtores, palavra this, sobrecarga, encapsulamento</a>
 
-- 51. Construtores
+- 51 Construtores
   - É uma operação especial da classe, que executa no momento da instanciação do objeto
   - Usos comuns:
   - Iniciar valores dos atributos
@@ -669,10 +669,10 @@ namespace Contrutores
 
 ```
 
-- 52. Sobrecarga
+- 52 Sobrecarga
   - É um recurso que uma classe possui de oferecer mais de uma operação com o mesmo nome, porém com  diferentes listas de parâmetros.
 - Proposta de melhoria
-  - Vamos criar um construtor opcional, o qual recebe apenas nome e preço do produto. A quantidade em estoque deste novo produto, por padrão, deverá então ser iniciada com o valor zero.
+  - Vamos criar um construtor opcional, o qual recebe apenas nome e preço do produto A quantidade em estoque deste novo produto, por padrão, deverá então ser iniciada com o valor zero.
   - Nota: é possível também incluir um construtor padrão (sem parâmetros)
 
 ```csharp
@@ -689,7 +689,7 @@ namespace Contrutores
 
 ```
 
-- 53. Sintaxe alternativa para inicializar valores
+- 53 Sintaxe alternativa para inicializar valores
 
 ```csharp
 public Produto() {
@@ -715,7 +715,7 @@ Produto p2 = new Produto() {
 // Isso funciona mesmo se a classe não possuir construtores implementados
 ```
 
-- 54. Palavra this 
+- 54 Palavra this 
 
 - É uma referência para o próprio objeto
 - Usos comuns:
@@ -748,7 +748,7 @@ class ChessMatch {
 (...)
 ```
 
-- 55. Encapsulamento
+- 55 Encapsulamento
   - É um princípio que consiste em esconder detalhes de implementação de um componente, expondo apenas operações seguras e que o mantenha em um estado consistente.
   - Regra de ouro: o objeto deve sempre estar em um estado consistente, e a própria classe deve garantir isso.
   
@@ -807,7 +807,7 @@ namespace Course {
 }
 ```
 
-- 56. Properties
+- 56 Properties
   - São definições de métodos encapsulados, porém expondo uma sintaxe similar à de atributos e não de métodos
   - https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/classes-and-structs/properties
   - Uma propriedade é um membro que oferece um mecanismo flexível para ler, gravar ou calcular o valor de um campo particular. As propriedades podem ser usadas como se fossem atributos públicos, mas na verdade elas são métodos especiais chamados "acessadores". Isso permite que os dados sejam acessados facilmente e ainda ajuda a promover a segurança e a flexibilidade dos métodos.
@@ -857,7 +857,7 @@ namespace Course {
     }
 ```
 
-- 57. Auto Properties
+- 57 Auto Properties
   - É uma forma simplificada de se declarar propriedades que não necessitam lógicas particulares para as operações get e set.
   - https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties
 
@@ -906,14 +906,14 @@ namespace Course {
 }
 ```
 
-- 58. Ordem sugerida para implementação de membros de classe
+- 58 Ordem sugerida para implementação de membros de classe
   - Atributos privados
   - Propriedades autoimplementadas
   - Construtores
   - Propriedades customizadas
   - Outros métodos da classe
 
-- 59. Modificadores de acesso
+- 59 Modificadores de acesso
 
 - https://docs.microsoft.com/en-us/dotnet/csharp/languagereference/keywords/access-modifiers
 
@@ -929,7 +929,7 @@ namespace Course {
     - private class Product
     - Nota: classe aninhada, por padrão, é private
 
-- 60. Exercício de fixação
+- 60 Exercício de fixação
 
 Em um banco, para se cadastrar uma conta bancária, é necessário informar o número da conta, o nome do titular da conta, e o valor de depósito inicial que o titular depositou ao abrir a conta. Este valor de depósito inicial, entretanto, é opcional, ou seja: se o titular não tiver dinheiro a depositar no momento de abrir sua conta, o depósito inicial não será feito e o saldo inicial da conta será, naturalmente, zero.
 Importante: uma vez que uma conta bancária foi aberta, o número da conta nunca poderá ser alterado. Já o nome do titular pode ser alterado (pois uma pessoa pode mudar de nome por ocasião de casamento, por exemplo).
@@ -976,9 +976,9 @@ Conta 7801, Titular: Maria Brown, Saldo: $ -3.00
 ```
 
 
-- 61. Correção do exercício - PARTE 1
+- 61 Correção do exercício - PARTE 1
 
-- 62. Correção do exercício - PARTE 2
+- 62 Correção do exercício - PARTE 2
   
 ```csharp
 using System;
@@ -1086,11 +1086,11 @@ namespace Exercicio60
 
 ## <a name="parte6">6 - Comportamento de memória, arrays, listas</a>
 
-- 63. Visão geral do capítulo
-- 64. Material de apoio do capítulo
+- 63 Visão geral do capítulo
+- 64 Material de apoio do capítulo
   - [6-Comportamento-de-memoria-arrays-listas/00-materiais](/6-Comportamento-de-memoria-arrays-listas/00-materiais)
-- 65. Aviso sobre conteúdo antigo
-- 66. Tipos referência e tipos valor
+- 65 Aviso sobre conteúdo antigo
+- 66 Tipos referência e tipos valor
 
 Variáveis cujo tipo são classes não devem ser entendidas como caixas, mas sim “tentáculos” (ponteiros) para caixas
 
@@ -1146,7 +1146,7 @@ namespace Course {
 ![Referências vs. Valor](6-Comportamento-de-memoria-arrays-listas/img/tipos_referencias_valor.png)
 
 
-- 67. Desalocação de memória - garbage collector e escopo local
+- 67 Desalocação de memória - garbage collector e escopo local
 
 **Garbage collector**
 
@@ -1163,21 +1163,21 @@ namespace Course {
 - *Variáveis locais são desalocadas imediatamente assim que seu escopo local sai de execução*
 
 
-- 68. Nullable
-- 69. Vetores - PARTE 1
-- 70. Vetores - PARTE 2
-- 71. Exercício de fixação (vetores)
-- 72. Modificador de parâmetros params
-- 73. Modificadores de parâmetros ref e out
-- 74. Boxing e unboxing
-- 75. Sintaxe opcional: laço foreach
-- 76. Listas (List) - PARTE 1
-- 77. Listas (List) - PARTE 2
-- 78. Exercício de fixação (listas)
-- 79. Matrizes
-- 80. Exercício resolvido (matrizes)
-- 81. Exercício de fixação (matrizes)
-- 82. Conjuntos (aviso)
+- 68 Nullable
+- 69 Vetores - PARTE 1
+- 70 Vetores - PARTE 2
+- 71 Exercício de fixação (vetores)
+- 72 Modificador de parâmetros params
+- 73 Modificadores de parâmetros ref e out
+- 74 Boxing e unboxing
+- 75 Sintaxe opcional: laço foreach
+- 76 Listas (List) - PARTE 1
+- 77 Listas (List) - PARTE 2
+- 78 Exercício de fixação (listas)
+- 79 Matrizes
+- 80 Exercício resolvido (matrizes)
+- 81 Exercício de fixação (matrizes)
+- 82 Conjuntos (aviso)
 
 [Voltar ao Índice](#indice)
 
