@@ -1219,6 +1219,56 @@ namespace Course {
 ```
 
 - 69 Vetores - PARTE 1
+
+- Em programação, "vetor" é o nome dado a arranjos unidimensionais
+- Arranjo é uma estrutura de dados:
+  - Homogênea (dados do mesmo tipo)
+  - Ordenada (elementos acessados por meio de posições)
+  - Alocada de uma vez só, em um bloco contíguo de memória
+- Vantagens:
+  - Acesso imediato aos elementos pela sua posição
+- Desvantagens:
+  - Tamanho fixo
+  - Dificuldade para se realizar inserções e deleções
+
+Problemas Exemplo 1
+
+Fazer um programa para ler um número inteiro N e a altura de N pessoas.
+Armazene as N alturas em um vetor. Em seguida, mostrar a altura média dessas pessoas.
+
+![Vetor](6-Comportamento-de-memoria-arrays-listas/img/vetor_1_1.png)
+
+![Vetor](6-Comportamento-de-memoria-arrays-listas/img/vetor_1_2.png)
+
+```csharp
+using System;
+using System.Globalization;
+
+namespace vetor1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Entre com os dados");
+            int n = int.Parse(Console.ReadLine());
+            double[] vect = new double[n];
+            for (int i = 0; i < n; i++) {
+            vect[i] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            }
+            double sum = 0.0;
+            for (int i = 0; i < n; i++) {
+            sum += vect[i];
+            }
+            double avg = sum / n;
+            Console.WriteLine("AVERAGE HEIGHT = " + avg.ToString("F2", CultureInfo.InvariantCulture));
+        }
+    }
+}
+
+```
+
+
 - 70 Vetores - PARTE 2
 - 71 Exercício de fixação (vetores)
 - 72 Modificador de parâmetros params
