@@ -1270,6 +1270,62 @@ namespace vetor1
 
 
 - 70 Vetores - PARTE 2
+
+Fazer um programa para ler um número inteiro N e os dados (nome e preço) de N Produtos. Armazene os N produtos em um vetor. Em seguida, mostrar o preço médio dos produtos.
+
+![](6-Comportamento-de-memoria-arrays-listas/img/vetor_1_3.png)
+
+![](6-Comportamento-de-memoria-arrays-listas/img/vetor_1_4.png)
+
+
+```csharp
+namespace vetor2
+{
+    public class Product
+    {
+        public string Name {get; set;}
+        public double Price {get; set;}
+    }
+}
+```
+
+```csharp
+
+using System;
+using System.Globalization;
+
+namespace vetor2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+
+            Product[] vect = new Product[n];
+
+            for(int i = 0 ; i < n ; i++){
+                string name  = Console.ReadLine();
+                double price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                vect[i] = new Product{Name = name, Price = price};
+            }
+
+            double sum = 0.0;
+
+            for (int i = 0; i < n; i++)
+            {
+                sum += vect[i].Price;
+            }
+
+            double avg = sum/n;
+            Console.WriteLine("AVERAGE PRICE = " + avg.ToString("F2", CultureInfo.InvariantCulture));
+        }
+    }
+}
+
+
+```
+
 - 71 Exercício de fixação (vetores)
 - 72 Modificador de parâmetros params
 - 73 Modificadores de parâmetros ref e out
