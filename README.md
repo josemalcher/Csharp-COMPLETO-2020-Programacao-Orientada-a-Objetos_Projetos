@@ -1916,7 +1916,27 @@ namespace exerMatriz2
 
 ## <a name="parte7">7 - Tópicos especiais em C# - PARTE 1</a>
 
+- 83 Visão geral do capítulo
+- 84 Material de apoio do capítulo
+- 85 Inferência de tipos: palavra var
 
+```csharp
+    var x = 10;
+    var y = 20.0;
+    var z = "Maria";
+    Console.WriteLine(x);
+    Console.WriteLine(y);
+    Console.WriteLine(z);
+```
+
+- 86 Sintaxe alternativa - switch-case
+- 87 Sintaxe alternativa - expressão condicional ternária
+- 88 Funções interessantes para string
+- 89 DateTime - representando data e hora
+- 90 TimeSpan - representando durações
+- 91 Propriedades e operações com DateTime
+- 92 Propriedades e operações com TimeSpan
+- 93 DateTimeKind e padrão ISO 8601
 
 [Voltar ao Índice](#indice)
 
