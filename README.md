@@ -1930,7 +1930,33 @@ namespace exerMatriz2
 ```
 
 - 86 Sintaxe alternativa - switch-case
+    - Estrutura opcional a vários if-else encadeados, quando a condição envolve o teste do valor de uma variável
+  
+![](7-Topicos-especiais-em-Csharp-PARTE-1/img/switch_case.png)  
+
 - 87 Sintaxe alternativa - expressão condicional ternária
+
+Estrutura opcional ao if-else quando se deseja decidir um VALOR com base em uma condição.
+
+![Ternarios](7-Topicos-especiais-em-Csharp-PARTE-1/img/ternarios.png)
+
+```csharp
+double preco = 34.5;
+double desconto;
+
+if (preco < 20.0) {
+    desconto = preco * 0.1;
+}
+else {
+    desconto = preco * 0.05;
+}
+```
+
+```csharp
+    double preco = 34.5;
+    double desconto = (preco < 20.0) ? preco * 0.1 : preco * 0.05;
+```
+
 - 88 Funções interessantes para string
 - 89 DateTime - representando data e hora
 - 90 TimeSpan - representando durações
