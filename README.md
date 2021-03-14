@@ -2070,7 +2070,122 @@ Console.WriteLine("IsNullOrWhiteSpace: " + b2);
 ```
 
 - 90 TimeSpan - representando durações
+  - Representa uma DURAÇÃO
+  - É um tipo valor (struct)
+  - [https://docs.microsoft.com/en-us/dotnet/api/system.timespan?redirectedfrom=MSDN&view=net-5.0](https://docs.microsoft.com/en-us/dotnet/api/system.timespan?redirectedfrom=MSDN&view=net-5.0)
+  
+  - Um objeto TimeSpan internamente armazena uma duração na forma de ticks (100 nanosegundos)
+
+```csharp
+    TimeSpan t1 = new TimeSpan(0, 1, 30);
+    Console.WriteLine(t1);
+    Console.WriteLine(t1.Ticks);
+```
+- Construtores
+  - TimeSpan()
+  - TimeSpan(ticks)
+  - TimeSpan(horas, minutos, segundos)
+  - TimeSpan(dias, horas, minutos, segundos)
+  - TimeSpan(dias, horas, minutos, segundos, milissegundos)
+
+```csharp
+    TimeSpan t1 = new TimeSpan();
+    TimeSpan t2 = new TimeSpan(900000000L);
+    TimeSpan t3 = new TimeSpan(2, 11, 21);
+    TimeSpan t4 = new TimeSpan(1, 2, 11, 21);
+    TimeSpan t5 = new TimeSpan(1, 2, 11, 21, 321);
+    Console.WriteLine(t1);
+    Console.WriteLine(t2);
+    Console.WriteLine(t3);
+    Console.WriteLine(t4);
+    Console.WriteLine(t5);
+```
+- Métodos From
+
+```csharp
+    TimeSpan t1 = TimeSpan.FromDays(1.5);
+    TimeSpan t2 = TimeSpan.FromHours(1.5);
+    TimeSpan t3 = TimeSpan.FromMinutes(1.5);
+    TimeSpan t4 = TimeSpan.FromSeconds(1.5);
+    TimeSpan t5 = TimeSpan.FromMilliseconds(1.5);
+    TimeSpan t6 = TimeSpan.FromTicks(900000000L);
+    Console.WriteLine(t1);
+    Console.WriteLine(t2);
+    Console.WriteLine(t3);
+    Console.WriteLine(t4);
+    Console.WriteLine(t5);
+    Console.WriteLine(t6);
+```
+
 - 91 Propriedades e operações com DateTime
+  - Date (DateTime)
+  - Day (int)
+  - DayOfWeek (DayOfWeek)
+  - DayOfYear (int)
+  - Hour (int)
+  - Kind (DateTimeKind)
+  - Millisecond (int)
+  - Minute (int)
+  - Month (int)
+  - Second (int)
+  - Ticks (long)
+  - TimeOfDay (TimeSpan)
+  - Year (int)
+
+```csharp
+    DateTime d = new DateTime(2001, 8, 15, 13, 45, 58, 275);
+    Console.WriteLine(d);
+    Console.WriteLine("1) Date: " + d.Date);
+    Console.WriteLine("2) Day: " + d.Day);
+    Console.WriteLine("3) DayOfWeek: " + d.DayOfWeek);
+    Console.WriteLine("4) DayOfYear: " + d.DayOfYear);
+    Console.WriteLine("5) Hour: " + d.Hour);
+    Console.WriteLine("6) Kind: " + d.Kind);
+    Console.WriteLine("7) Millisecond: " + d.Millisecond);
+    Console.WriteLine("8) Minute: " + d.Minute);
+    Console.WriteLine("9) Month: " + d.Month);
+    Console.WriteLine("10) Second: " + d.Second);
+    Console.WriteLine("11) Ticks: " + d.Ticks);
+    Console.WriteLine("12) TimeOfDay: " + d.TimeOfDay);
+    Console.WriteLine("13) Year: " + d.Year);
+```
+- Formatação (DateTime -> string)
+
+```csharp
+    DateTime d = new DateTime(2001, 8, 15, 13, 45, 58);
+    string s1 = d.ToLongDateString();
+    string s2 = d.ToLongTimeString();
+    string s3 = d.ToShortDateString();
+    string s4 = d.ToShortTimeString();
+    string s5 = d.ToString();
+    string s6 = d.ToString("yyyy-MM-dd HH:mm:ss");
+    string s7 = d.ToString("yyyy-MM-dd HH:mm:ss.fff");
+    Console.WriteLine(s1);
+    Console.WriteLine(s2);
+    Console.WriteLine(s3);
+    Console.WriteLine(s4);
+    Console.WriteLine(s5);
+    Console.WriteLine(s6);
+    Console.WriteLine(s7);
+```
+
+- Operações com Datetime
+
+```csharp
+// DateTime x = ...
+    DateTime y = x.Add(timeSpan);
+    DateTime y = x.AddDays(double);
+    DateTime y = x.AddHours(double);
+    DateTime y = x.AddMilliseconds(double);
+    DateTime y = x.AddMinutes(double);
+    DateTime y = x.AddMonths(int);
+    DateTime y = x.AddSeconds(double);
+    DateTime y = x.AddTicks(long);
+    DateTime y = x.AddYears(int);
+    DateTime y = x.Subtract(timeSpan);
+    TimeSpan t = x.Subtract(dateTime);
+```
+
 - 92 Propriedades e operações com TimeSpan
 - 93 DateTimeKind e padrão ISO 8601
 
