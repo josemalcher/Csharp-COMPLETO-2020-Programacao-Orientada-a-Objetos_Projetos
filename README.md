@@ -2542,10 +2542,47 @@ namespace enum1
 }
 
 ```
+Conversões
+
+Para o tipo original: use casting
+
+```csharp
+    OrderStatus os1 = (OrderStatus)2;
+    int n1 = (int)OrderStatus.Processing;
+```
+- string - enum:
+
+```csharp   
+    string txt = OrderStatus.PendingPayment.ToString();
+    OrderStatus os = Enum.Parse<OrderStatus>("Delivered");
+    Console.WriteLine(os);
+    Console.WriteLine(txt);
+```
+
+Notação UML
+
+![ENUM UML](9-Enumeracoes-e-composicao/img/enum_uml.png)
 
 
 - 116 Vamos falar um pouco sobre design
+
+- Em um sistema orientado a objetos, de modo geral "tudo" é objeto.
+- Por questões de design tais como organização, flexibilidade, reuso, delegação, etc., há várias categorias de classes:
+
+![Classes](9-Enumeracoes-e-composicao/img/classes_etc.png)
+
+Entities
+
+![Entidades](9-Enumeracoes-e-composicao/img/Entidades_1.png)
+
+Services
+
+![Services](9-Enumeracoes-e-composicao/img/services.png)
+
 - 117 Composição
+
+
+
 - 118 AVISO: recordando sobre conversão de string para enumeração
 - 119 Exercício resolvido 01 - PARTE 1/3
 - 120 Exercício resolvido 01 - PARTE 2/3
