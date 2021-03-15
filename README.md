@@ -2297,6 +2297,144 @@ Console.WriteLine("IsNullOrWhiteSpace: " + b2);
 
 ## <a name="parte8">8 - Introdução ao Git e Github</a>
 
+- 94 Visão geral sobre esta seção bônus
+- 95 Material de apoio do capítulo
+- 96 Visão geral do Git
+  - Sistema de versionamento distribuído
+  -  Para utilizar é preciso ter instalado um sistema Git no seu computador
+
+- 97 Instalando o Git Bash no Windows
+  - https://git-scm.com/downloads
+  - Opções recomendadas:
+  - Use Git from Git Bash only
+  - Checkout Windows-style, commit Unix-style line endings
+  - Use MinTTY
+  - DESMARQUE: Enable Git Credential Manager
+
+- 98 Como criar um novo repositório Git - comando init
+  - O que é e como criar o arquivo .gitignore
+  - git init
+- 99 Configurando a identifcação do usuário no Git - comando config
+  - git config --global user.name "Seu Nome"
+  - git config --global user.email "Seu Email
+- 100 Salvando versões - comandos add, commit, status e log
+
+![Stages](8-Introducao-ao-Git-e-Github/img/stages.png)
+
+- 101 E se eu esquecer de colocar a mensagem no commit? - editor VIM
+
+Se você esquecer de especificar a mensagem do commit, o Git Bash vai abrir o VIM para edição.
+Para sair do VIM tecle <ESC> e depois digite:
+
+```
+:q!
+Tecle <ENTER>
+```
+
+- 102 E se eu me perder e quiser voltar ao estado do commit atual? - comando clean -df
+
+Descartar todas modificações, voltando ao estado do commit atual:
+
+```
+    git clean -df
+    git checkout -- .
+```
+
+- 103 E se eu quiser desfazer o último commit? - comando reset
+
+1 Remover o último commit mantendo as alterações nos arquivos:
+
+```
+git reset --soft HEAD~1
+```
+
+2 Remover o último commit INCLUSIVE as alterações nos arquivos (PERIGO!):
+
+```
+    git reset --hard HEAD~1
+```
+- 104 E se eu quiser somente dar uma olhada em uma versão anterior? - comando checkout
+
+1 Navegar entre commits, alterando os arquivos temporariamente:
+
+```
+    git checkout <código do commit>
+```
+2 Voltar para o último commit:
+
+```
+    git checkout <nome do branch>
+```
+
+- 105 Visão geral do Github
+  - É um serviço de armazenamento remoto de repositórios Git
+  - Interface com usuário via web
+  - Padrão da indústria para armazenamento de projetos de código aberto
+  - Maior hospedeiro de código fonte do mundo
+  - Planos pagos para repositórios privados
+  - É uma "rede social" de repositórios Git. Dica: currículo!
+
+- 106 Criando um repositório remoto no Github
+  - Faça login no Github
+  - Crie um repositório vazio (sem readme, sem gitignore e sem licença)
+
+- 107 Associando o repositório local ao repositório remoto do Github - comando remote
+
+1 Associar nosso repositório local ao repositório remoto, dando o apelido de "origin" a ele:
+
+```
+git remote add origin <URI do repositório remoto> 
+```
+
+2 Associar o repositório local a um outro repositório remoto, porém mantendo o mesmo apelido:
+
+```
+git remote set-url origin <URI do repositório remoto>
+```
+
+- 108 Transferindo o repositório local para o Github - comando push
+
+```
+    git push -u origin master
+```
+Nota: se você usou a opção -u, nas próximas vezes que for subir o branch master, basta fazer:
+
+```
+    git push
+```
+Nota: veja o quanto é fácil visualizar as diferenças entre os commits no Github!
+
+- 109 A importância de se configurar corretamente o usuário no Git Bash
+
+Toda vez que um commit é realizado, é registrado QUEM fez o commit
+
+Por isso, sempre que for trabalhar, assegure-se que seu nome e email está devidamente configurado no Git Bash:
+
+```
+    git config --global user.name "Seu Nome"
+    git config --global user.email "Seu Email"
+```
+
+Importante: recomenda-se que você use seu email de cadastro no Github, pois assim ficará registrado na rede social que seu usuário do Github é quem fez o commit
+
+- 110 Transferindo um repositório remoto para seu computador - comando clone
+
+Copiar o repositório, inclusive o histórico de commits:
+
+```
+    git clone <URI do repositório remoto>
+```
+ATENÇÃO: simplesmente copiar os arquivos NÃO traz o histórico de commits!
+
+- 111 Atualizando seu repositório local - comando pull
+
+IMPORTANTE: o Git só deixa você continuar um trabalho e depois subi-lo para o repositório remoto, se você mantiver a sequência coerente de commits
+
+Comando para atualizar seu repositório local:
+
+```
+    git pull origin master
+```
 
 
 [Voltar ao Índice](#indice)
