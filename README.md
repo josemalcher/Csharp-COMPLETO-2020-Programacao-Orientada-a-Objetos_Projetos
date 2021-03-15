@@ -2444,7 +2444,114 @@ Comando para atualizar seu repositório local:
 
 ## <a name="parte9">9 - Enumerações e composição</a>
 
+- 114 AVISO: conversão de string para enumeração
 
+AVISO IMPORTANTE SOBRE CONVERSÃO DE STRING
+
+No próximo vídeo vamos aprender sobre ENUMERAÇÕES.
+
+Na aula fazemos a conversão de string para enumeração assim:
+
+```
+    OrderStatus os = Enum.Parse<OrderStatus>("Delivered");
+```
+
+Mas, dependendo da versão do compilador C#, isso pode dar problema. Se for o caso, por favor tente deste jeito:
+
+```
+OrderStatus os = (OrderStatus)Enum.Parse(typeof(OrderStatus), "Delivered");
+```
+
+Se mesmo assim ainda tiver dando erro, há ainda uma terceira forma:
+```
+    OrderStatus os;
+    Enum.TryParse("Delivered", out os);
+```
+
+- 115 Enumerações
+  - É um tipo especial que serve para especificar de forma literal um conjunto de constantes relacionadas
+  - Palavra chave em C#: enum
+  - Nota: enum é um tipo valor
+  - Vantagem: melhor semântica, código mais legível e auxiliado pelo compilador
+  - Referência: [https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum)
+
+
+```csharp
+namespace enum1.Entities.Enums
+{
+    enum OrderStatus : int 
+    {
+        PendingPayment = 0,
+        Processing = 1,
+        Shipped = 2,
+        Delivered = 3
+    }
+}
+```
+
+```csharp
+using System;
+using enum1.Entities.Enums;
+
+namespace enum1.Entities
+{
+    class Order
+    {
+        public int Id { get; set; }
+        public DateTime Moment { get; set; }
+        public OrderStatus Status { get; set; }
+
+        public override string ToString() {
+            return Id
+                + ", "
+                + Moment
+                + ", "
+                + Status;
+        }
+    }
+}
+```
+
+```csharp
+using System;
+using enum1.Entities;
+using enum1.Entities.Enums;
+
+namespace enum1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Order order = new Order {
+                Id = 1080,
+                Moment = DateTime.Now,
+                Status = OrderStatus.PendingPayment
+            };
+
+            Console.WriteLine(order);
+
+            string txt = OrderStatus.PendingPayment.ToString();
+
+            OrderStatus os = Enum.Parse<OrderStatus>("Delivered");
+
+            Console.WriteLine(os);
+            Console.WriteLine(txt);
+        }
+    }
+}
+
+```
+
+
+- 116 Vamos falar um pouco sobre design
+- 117 Composição
+- 118 AVISO: recordando sobre conversão de string para enumeração
+- 119 Exercício resolvido 01 - PARTE 1/3
+- 120 Exercício resolvido 01 - PARTE 2/3
+- 121 Exercício resolvido 01 - PARTE 3/3
+- 122 Exercício resolvido 2 (demo StringBuilder)
+- 123 Exercício proposto (Enumerações e Composição)
 
 [Voltar ao Índice](#indice)
 
