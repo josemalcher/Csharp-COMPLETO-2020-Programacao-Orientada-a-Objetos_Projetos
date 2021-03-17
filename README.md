@@ -2580,13 +2580,80 @@ Services
 ![Services](9-Enumeracoes-e-composicao/img/services.png)
 
 - 117 Composição
+  - É um tipo de associação que permite que um objeto contenha outro 
+  - Relação "tem-um" ou "tem-vários"
+  - Vantagens
+    - Organização: divisão de responsabilidades
+    - Coesão
+    - Flexibilidade
+    - Reuso
+  - Nota: embora o símbolo UML para composição (todo-parte) seja o diamante preto, neste contexto estamos chamando de composição qualquer associação tipo "tem-um" e "tem-muitos"
 
+![Composição UML](9-Enumeracoes-e-composicao/img/entities_composicao.png)
 
+![Service Composição UML](9-Enumeracoes-e-composicao/img/service_composicao_uml.png)
 
 - 118 AVISO: recordando sobre conversão de string para enumeração
+
+No vídeo convertemos de string para enumeração deste jeito:
+
+```
+    OrderStatus os = Enum.Parse<OrderStatus>("Delivered");
+```
+Mas se não funcionar na sua versão do C#, tente deste jeito:
+
+```
+    OrderStatus os = (OrderStatus)Enum.Parse(typeof(OrderStatus), "Delivered");
+```
+Se mesmo assim ainda tiver dando erro, há ainda uma terceira forma:
+
+```
+    OrderStatus os;
+    Enum.TryParse("Delivered", out os);
+```
+
 - 119 Exercício resolvido 01 - PARTE 1/3
+
+Ler os dados de um trabalhador com N contratos (N fornecido pelo usuário). Depois, solicitar do usuário um mês e mostrar qual foi o salário do funcionário nesse mês, conforme exemplo (próxima página).
+
+![Exercício 1](9-Enumeracoes-e-composicao/img/exer_1.png)
+
+```
+Enter department's name: Design
+Enter worker data:
+Name: Alex
+Level (Junior/MidLevel/Senior): MidLevel
+Base salary: 1200.00
+How many contracts to this worker? 3
+Enter #1 contract data:
+Date (DD/MM/YYYY): 20/08/2018
+Value per hour: 50.00
+Duration (hours): 20
+Enter #2 contract data:
+Date (DD/MM/YYYY): 13/06/2018
+Value per hour: 30.00
+Duration (hours): 18
+Enter #3 contract data:
+Date (DD/MM/YYYY): 25/08/2018
+Value per hour: 80.00
+Duration (hours): 10
+
+Enter month and year to calculate income (MM/YYYY): 08/2018
+Name: Alex
+Department: Design
+Income for 08/2018: 3000.00
+```
+
 - 120 Exercício resolvido 01 - PARTE 2/3
+  - Objects in memory
+
+![Objects in memory](9-Enumeracoes-e-composicao/img/momory_1.png)
+
+![Objects in memory](9-Enumeracoes-e-composicao/img/momory_2.png)
+
 - 121 Exercício resolvido 01 - PARTE 3/3
+  - [9-Enumeracoes-e-composicao\solutions09\exerRevol](/9-Enumeracoes-e-composicao/solutions09/exerRevol)
+
 - 122 Exercício resolvido 2 (demo StringBuilder)
 - 123 Exercício proposto (Enumerações e Composição)
 
