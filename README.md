@@ -2702,7 +2702,7 @@ Você deverá instanciar os objetos em memória da seguinte forma:
 
 ![](9-Enumeracoes-e-composicao/img/exer_proposto_2.png)
 
-Solução: []()
+Solução: [9-Enumeracoes-e-composicao\solutions09\ExerProposto](/9-Enumeracoes-e-composicao/solutions09/ExerProposto)
 
 [Voltar ao Índice](#indice)
 
