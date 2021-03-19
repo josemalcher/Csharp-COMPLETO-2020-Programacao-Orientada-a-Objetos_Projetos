@@ -2713,8 +2713,7 @@ Solução: [9-Enumeracoes-e-composicao\solutions09\ExerProposto](/9-Enumeracoes-
 
 - 126 Herança
 
-É um tipo de associação que permite que uma classe herde dados e
-comportamentos de outra
+É um tipo de associação que permite que uma classe herde dados e comportamentos de outra
 - Definições importantes
 - Vantagens
   - Reuso
@@ -2724,23 +2723,6 @@ comportamentos de outra
   - base (referência para a superclasse)
 
 Suponha um negócio de banco que possui uma conta comum e uma conta para empresas, sendo que a conta para empresa possui todos membros da conta comum, mais um limite de empréstimo e uma operação de realizar empréstimo.
-
-
-
-- 127 Upcasting e downcasting
-- 128 Sobreposição, palavras virtual, override e base
-- 129 Classes e métodos selados
-- 130 Introdução ao polimorfismo
-- 131 Exercício resolvido - PARTE 1
-- 132 Exercício resolvido - PARTE 2
-- 133 Exercício proposto (herança e polimorfismo)
-- 134 Classes abstratas
-- 135 Métodos abstratos
-- 136 Exercício resolvido (métodos abstratos)
-- 137 Exercício proposto (métodos abstratos)
-
-
-[Voltar ao Índice](#indice)
 
 ![](10-Heranca-e-polimorfismo/img/heranca_1.png)
 
@@ -2813,10 +2795,26 @@ namespace inheritance1_csharp.Entities
 }
 ```
 
-
 Modificações de Acesso
 
 ![](10-Heranca-e-polimorfismo/img/mod_acessos_1.png)
+
+
+- 127 Upcasting e downcasting
+- 128 Sobreposição, palavras virtual, override e base
+- 129 Classes e métodos selados
+- 130 Introdução ao polimorfismo
+- 131 Exercício resolvido - PARTE 1
+- 132 Exercício resolvido - PARTE 2
+- 133 Exercício proposto (herança e polimorfismo)
+- 134 Classes abstratas
+- 135 Métodos abstratos
+- 136 Exercício resolvido (métodos abstratos)
+- 137 Exercício proposto (métodos abstratos)
+
+
+[Voltar ao Índice](#indice)
+
 
 ## <a name="parte11">11 - Tratamento de exceções</a>
 
