@@ -2711,12 +2711,112 @@ Solução: [9-Enumeracoes-e-composicao\solutions09\ExerProposto](/9-Enumeracoes-
 
 ## <a name="parte10">10 - Herança e polimorfismo</a>
 
+- 126 Herança
+
+É um tipo de associação que permite que uma classe herde dados e
+comportamentos de outra
+- Definições importantes
+- Vantagens
+  - Reuso
+  - Polimorfismo
+- Sintaxe
+  - : (estende)
+  - base (referência para a superclasse)
+
+Suponha um negócio de banco que possui uma conta comum e uma conta para empresas, sendo que a conta para empresa possui todos membros da conta comum, mais um limite de empréstimo e uma operação de realizar empréstimo.
+
+
+
+- 127 Upcasting e downcasting
+- 128 Sobreposição, palavras virtual, override e base
+- 129 Classes e métodos selados
+- 130 Introdução ao polimorfismo
+- 131 Exercício resolvido - PARTE 1
+- 132 Exercício resolvido - PARTE 2
+- 133 Exercício proposto (herança e polimorfismo)
+- 134 Classes abstratas
+- 135 Métodos abstratos
+- 136 Exercício resolvido (métodos abstratos)
+- 137 Exercício proposto (métodos abstratos)
 
 
 [Voltar ao Índice](#indice)
 
----
+![](10-Heranca-e-polimorfismo/img/heranca_1.png)
 
+- Relação "é-um"
+- Generalização/especialização
+- Superclasse (classe base) / subclasse (classe derivada)
+- Herança / extensão
+- Herança é uma associação entre classes (e não entre objetos)
+
+Exemplo: 
+
+```csharp
+namespace inheritance1_csharp.Entities
+{
+    public class Acoount
+    {
+        public int Number { get; set; }
+        public string Holder { get; set; }
+        public double Balance { get; set; }
+
+        public Acoount()
+        {
+        }
+
+        public Acoount(int number, string holder, double balance)
+        {
+            Number = number;
+            Holder = holder;
+            Balance = balance;
+        }
+
+        public void Withdraw(double amount)
+        {
+            Balance -= amount;
+
+        }
+
+        public void Deposit(double amount)
+        {
+            Balance += amount;
+
+        }
+    }
+}
+```
+
+```csharp
+namespace inheritance1_csharp.Entities
+{
+    public class BussinessAccount : Acoount
+    {
+        public double Limit { get; set; }
+
+        public BussinessAccount()
+        {
+        }
+
+        public BussinessAccount(int number, string holder, double balance, double limit) 
+            : base(number, holder, balance)
+        {
+            Limit = limit;
+        }
+
+        public void loan(double amount)
+        {
+            Balance += amount;
+
+        }
+    }
+}
+```
+
+
+Modificações de Acesso
+
+![](10-Heranca-e-polimorfismo/img/mod_acessos_1.png)
 
 ## <a name="parte11">11 - Tratamento de exceções</a>
 
