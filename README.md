@@ -2861,6 +2861,60 @@ namespace inheritance2_csharp
 ```
 
 - 128 Sobreposição, palavras virtual, override e base
+  - É a implementação de um método de uma superclasse na subclasse
+  - Para que um método comum (não abstrato) possa ser sobreposto, deve ser incluído nele o prefixo "virtual"
+  - Ao sobrescrever um método, devemos incluir nele o prefixo "override
+
+Suponha as seguintes regras para saque:
+
+- Conta comum: é cobrada uma taxa no valor de 5.00.
+- Conta poupança: não é cobrada taxa.
+
+Como resolver isso?
+
+Resposta: sobrescrevendo o método withdraw na subclasse SavingsAccount
+
+```csharp
+public virtual void Withdraw(double amount) {
+    Balance -= amount + 5.0;
+}
+```
+
+```csharp
+public override void Withdraw(double amount) {
+    Balance -= amount;
+}
+```
+
+Palavra base
+
+É possível chamar a implementação da superclasse usando a palavra base.
+
+Exemplo: suponha que a regra para saque para conta poupança seja realizar o saque
+normalmente da superclasse (Account), e depois descontar mais 2.0.
+
+```
+public override void Withdraw(double amount) {
+    base.Withdraw(amount);
+    Balance -= 2.0;
+}
+```
+Recordando: usando base em construtores
+
+```csharp
+class BusinessAccount : Account
+{
+    public double LoanLimit { get; set; }
+    public BusinessAccount()
+    {}
+public BusinessAccount(int number, string holder, double balance, double loanLimit)
+    : base(number, holder, balance)
+{
+    LoanLimit = loanLimit;
+}
+// (...)
+```
+
 - 129 Classes e métodos selados
 - 130 Introdução ao polimorfismo
 - 131 Exercício resolvido - PARTE 1
