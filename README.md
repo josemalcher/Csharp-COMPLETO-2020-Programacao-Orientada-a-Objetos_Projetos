@@ -2890,8 +2890,7 @@ Palavra base
 
 É possível chamar a implementação da superclasse usando a palavra base.
 
-Exemplo: suponha que a regra para saque para conta poupança seja realizar o saque
-normalmente da superclasse (Account), e depois descontar mais 2.0.
+Exemplo: suponha que a regra para saque para conta poupança seja realizar o saque normalmente da superclasse (Account), e depois descontar mais 2.0.
 
 ```
 public override void Withdraw(double amount) {
@@ -2916,6 +2915,39 @@ public BusinessAccount(int number, string holder, double balance, double loanLim
 ```
 
 - 129 Classes e métodos selados
+  - Palavra chave: sealed
+  - Classe: evita que a classe seja herdada
+  - Nota: ainda é possível extender a funcionalidade de uma classe selada usando "extension methods"
+
+``` chsarp
+namespace Course 
+{
+    sealed class SavingsAccount {
+```
+
+  - Método: evita que um método sobreposto possa ser sobreposto novamente • Só pode ser aplicado a métodos sobrepostos
+
+![](10-Heranca-e-polimorfismo/img/seled.png)
+
+Exemplo - método selado
+
+Suponha que você não queira que o método Withdraw de SavingsAccount seja sobreposto novamente
+
+```csharp
+    public sealed override void Withdraw(double amount)
+    {
+        base.Withdraw(amount);
+        Balance -= 2.0;
+    }
+```
+Pra quê?
+- Segurança: dependendo das regras do negócio, às vezes é desejável garantir que uma classe não seja herdada, ou que um método não seja sobreposto.
+- Geralmente convém selar métodos sobrepostos, pois sobreposições múltiplas podem ser uma porta de entrada para inconsistências
+- Performance: atributos de tipo de uma classe selada são analisados de forma mais rápida em tempo de execução.
+  - Exemplo clássico: string
+
+
+
 - 130 Introdução ao polimorfismo
 - 131 Exercício resolvido - PARTE 1
 - 132 Exercício resolvido - PARTE 2
