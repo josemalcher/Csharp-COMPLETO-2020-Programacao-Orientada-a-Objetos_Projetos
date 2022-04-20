@@ -419,7 +419,7 @@ namespace Course {
 
 [4-Secao-Classes-atributos-metodos-membros-estaticos\SolutionSecao04Revisao\Aula38SemOO\Program.cs](4-Secao-Classes-atributos-metodos-membros-estaticos\SolutionSecao04Revisao\Aula38SemOO\Program.cs)
 
-- 39. Criando uma classe com três atributos para representar melhor um Triângulo
+- 39 Criando uma classe com três atributos para representar melhor um Triângulo
 
 Classe
 - É um tipo estruturado que pode conter (membros):
@@ -440,7 +440,16 @@ Classe
     - Outros (views, repositórios, gerenciadores, etc.)
 
 ---
+- 41 Criando um método para obtermos os benefícios de reaproveitamento e delegação
 
+Quais são os benefícios de se calcular a área de um triângulo por meio de um MÉTODO dentro da CLASSE Triangulo?
+
+1) Reaproveitamento de código: nós eliminamos o código repetido (cálculo das áreas dos triângulos x e y) no programa principal.
+
+2) Delegação de responsabilidades: quem deve ser responsável por saber como calcular a área de um triângulo é o próprio triângulo. A lógica do cálculo da área não deve estar em outro lugar
+
+
+- 42
 - 43 Object e ToString
 - 44 Terminando de construir o programa
 
