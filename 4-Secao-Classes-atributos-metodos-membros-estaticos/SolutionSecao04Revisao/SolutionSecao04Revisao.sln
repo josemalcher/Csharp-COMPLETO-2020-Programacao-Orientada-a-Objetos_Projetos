@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula38SemOO", "Aula38SemOO\Aula38SemOO.csproj", "{080676B7-E566-4992-B5E8-9350D4F23322}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{080676B7-E566-4992-B5E8-9350D4F23322}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{080676B7-E566-4992-B5E8-9350D4F23322}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{080676B7-E566-4992-B5E8-9350D4F23322}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{080676B7-E566-4992-B5E8-9350D4F23322}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

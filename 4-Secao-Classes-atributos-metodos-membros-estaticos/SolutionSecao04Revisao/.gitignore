@@ -1,0 +1,7 @@
+﻿# IntelliJ project files
+.idea
+*.iml
+out
+gen
+/Aula38SemOO/bin/*
+/Aula38SemOO/obj/*
