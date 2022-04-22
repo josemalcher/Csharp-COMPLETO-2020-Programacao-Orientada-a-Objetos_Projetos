@@ -449,8 +449,17 @@ Quais são os benefícios de se calcular a área de um triângulo por meio de um
 2) Delegação de responsabilidades: quem deve ser responsável por saber como calcular a área de um triângulo é o próprio triângulo. A lógica do cálculo da área não deve estar em outro lugar
 
 
-- 42
+- 42 Começando a resolver um segundo problema exemplo
 - 43 Object e ToString
+
+- Toda classe em C# é uma subclasse da classe Object
+- Object possui os seguintes métodos:
+    - GetType - retorna o tipo do objeto
+    - Equals - compara se o objeto é igual a outro
+    - GetHashCode - retorna um código hash do objeto
+    - ToString - converte o objeto para string
+
+
 - 44 Terminando de construir o programa
 
 ```csharp
