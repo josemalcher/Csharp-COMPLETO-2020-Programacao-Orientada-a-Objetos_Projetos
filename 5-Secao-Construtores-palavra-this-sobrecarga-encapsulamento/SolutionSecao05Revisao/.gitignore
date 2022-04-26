@@ -1,0 +1,8 @@
+﻿# IntelliJ project files
+.idea
+*.iml
+out
+gen
+
+/SolutionSecao05Revisao/bin/*
+/SolutionSecao05Revisao/obj/*
