@@ -1008,13 +1008,13 @@ namespace Course {
 
   - Classes
     - Acesso por qualquer classe
-    - public class Product
+        - public class Product
     - Acesso somente dentro do assembly
-    - internal class Product
-    - class Product
+        - internal class Product
+        - class Product
     - Acesso somente pela classe-mãe
-    - private class Product
-    - Nota: classe aninhada, por padrão, é private
+        - private class Product
+        - Nota: classe aninhada, por padrão, é private
 
 - 60 Exercício de fixação
 
