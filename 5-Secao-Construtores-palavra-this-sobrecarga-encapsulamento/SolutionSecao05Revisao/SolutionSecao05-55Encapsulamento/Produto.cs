@@ -14,22 +14,22 @@ public class Produto
         _preco = preco;
         _quantidade = quantidade;
     }
-    public string GetNome() {
-        return _nome;
-    }
-    public void SetNome(string nome) {
-        if (nome != null && nome.Length > 1) {
-            _nome = nome;
+    public string Nome {
+        get { return _nome; }
+        set {
+            if (value != null && value.Length > 1) { // value = parametro
+                _nome = value;
+            }
         }
     }
-    public double GetPreco() {
-        return _preco;
+    public double Preco {
+        get { return _preco; }
     }
-    public int GetQuantidade() {
-        return _quantidade;
+    public int Quantidade {
+        get { return _quantidade; }
     }
-    public double ValorTotalEmEstoque() {
-        return _preco * _quantidade;
+    public double ValorTotalEmEstoque {
+        get { return _preco * _quantidade; }
     }
     public void AdicionarProdutos(int quantidade) {
         _quantidade += quantidade;
@@ -44,6 +44,6 @@ public class Produto
                + ", "
                + _quantidade
                + " unidades, Total: $ "
-               + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
+               + ValorTotalEmEstoque.ToString("F2", CultureInfo.InvariantCulture);
     }
 }
