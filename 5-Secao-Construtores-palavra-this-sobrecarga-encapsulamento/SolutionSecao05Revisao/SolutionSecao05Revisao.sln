@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolutionSecao05Revisao", "SolutionSecao05Revisao\SolutionSecao05Revisao.csproj", "{F9F543E8-42F2-48F3-AD09-3494E13BB9B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolutionSecao05-55Encapsulamento", "SolutionSecao05-55Encapsulamento\SolutionSecao05-55Encapsulamento.csproj", "{18796B0B-9097-4866-86EC-E387EA97F978}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{F9F543E8-42F2-48F3-AD09-3494E13BB9B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9F543E8-42F2-48F3-AD09-3494E13BB9B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9F543E8-42F2-48F3-AD09-3494E13BB9B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18796B0B-9097-4866-86EC-E387EA97F978}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18796B0B-9097-4866-86EC-E387EA97F978}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18796B0B-9097-4866-86EC-E387EA97F978}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18796B0B-9097-4866-86EC-E387EA97F978}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
