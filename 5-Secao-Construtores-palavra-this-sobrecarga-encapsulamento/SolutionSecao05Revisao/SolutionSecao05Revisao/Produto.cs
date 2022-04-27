@@ -8,22 +8,15 @@ public class Produto
     public double Preco;
     public int Quantidade;
 
-    public Produto()
-    {
+    public Produto() {
+        Quantidade = 0;
     }
-
-    public Produto(string nome, double preco, int quantidade)
-    {
+    public Produto(string nome, double preco) : this() {
         Nome = nome;
         Preco = preco;
+    }
+    public Produto(string nome, double preco, int quantidade) : this(nome, preco) {
         Quantidade = quantidade;
-    }
-
-    public Produto(string nome, double preco)
-    {
-        Nome = nome;
-        Preco = preco;
-        Quantidade = 10;
     }
 
     public double ValorTotalEmEstoque() {

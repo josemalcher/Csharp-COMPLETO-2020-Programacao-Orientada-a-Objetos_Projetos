@@ -14,6 +14,18 @@ double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 // Produto p = new Produto(nome, preco, quantidade);
 Produto p = new Produto(nome, preco);
 
+Produto p1 = new Produto {
+    Nome = "TV",
+    Preco = 900.0,
+    Quantidade = 0
+};
+Produto p2 = new Produto() {
+    Nome = "TV",
+    Preco = 900.0,
+    Quantidade = 0
+};
+// Isso funciona mesmo se a classe não possuir construtores implementados
+
 Console.WriteLine();
 Console.WriteLine("Dados do produto: " + p);
 Console.WriteLine();
