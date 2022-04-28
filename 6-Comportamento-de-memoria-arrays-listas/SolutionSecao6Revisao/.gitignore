@@ -1,0 +1,8 @@
+﻿# IntelliJ project files
+.idea
+*.iml
+out
+gen
+
+/SolutionSecao6Revisao_66RefValor/bin/*
+/SolutionSecao6Revisao_66RefValor/obj/*
