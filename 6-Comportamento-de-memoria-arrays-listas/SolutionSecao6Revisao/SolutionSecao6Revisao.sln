@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolutionSecao6Revisao_66RefValor", "SolutionSecao6Revisao_66RefValor\SolutionSecao6Revisao_66RefValor.csproj", "{236E85EF-3FA9-4A74-A437-723E2923EF49}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vetor1", "vetor1\vetor1.csproj", "{F0BD54FC-7AA0-4834-8D8F-B4C7A1C928C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vetor2", "vetor2\vetor2.csproj", "{125C127D-7E06-4277-A687-375DED8696BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{236E85EF-3FA9-4A74-A437-723E2923EF49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{236E85EF-3FA9-4A74-A437-723E2923EF49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{236E85EF-3FA9-4A74-A437-723E2923EF49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0BD54FC-7AA0-4834-8D8F-B4C7A1C928C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0BD54FC-7AA0-4834-8D8F-B4C7A1C928C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0BD54FC-7AA0-4834-8D8F-B4C7A1C928C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0BD54FC-7AA0-4834-8D8F-B4C7A1C928C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{125C127D-7E06-4277-A687-375DED8696BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{125C127D-7E06-4277-A687-375DED8696BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{125C127D-7E06-4277-A687-375DED8696BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{125C127D-7E06-4277-A687-375DED8696BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
