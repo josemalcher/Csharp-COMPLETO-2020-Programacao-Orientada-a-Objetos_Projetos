@@ -36,6 +36,9 @@ Curso mais didático e completo de C# e OO Projetos com UML, ASP.NET, Entity Fra
 ![images\01_01_intro.png](images\01_01_intro.png)
 
 ### 2. O que estudar para me tornar um desenvolvedor?
+
+![images\01_02_prof.png](images\01_02_prof.png)
+
 ### 3. Será que preciso fazer um curso de Lógica?
 
 
@@ -47,7 +50,15 @@ Curso mais didático e completo de C# e OO Projetos com UML, ASP.NET, Entity Fra
 
 ## <a name="parte2">Seção 02: Introdução a C# e .NET</a>
 
-
+### 04. Visão geral do capítulo
+### 05. Material de apoio do capítulo
+### 06. C# e .NET
+### 07. Compilação e interpretação
+### 08. Estrutura de uma aplicação C#
+### 09. Instalação do Visual Studio Community
+### 10. Primeiro programa C# no Visual Studio
+### 11. Estrutura básica de um programa C#
+### 12. Dicas do Visual Studio
 
 [Voltar ao Índice](#indice)
 
