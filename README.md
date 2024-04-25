@@ -6,28 +6,37 @@ Curso mais didático e completo de C# e OO Projetos com UML, ASP.NET, Entity Fra
 
 ## <a name="indice">Índice</a>
 
-1. [Apresentação do curso e orientações](#parte1)     
-2. [Introdução a C# e .NET](#parte2)     
-3. [Recapitulação de Lógica de Programação usando C#](#parte3)     
-4. [Classes, atributos, métodos, membros estáticos](#parte4)     
-5. [Construtores, palavra this, sobrecarga, encapsulamento](#parte5)     
-6. [Comportamento de memória, arrays, listas](#parte6)     
-7. [Tópicos especiais em C# - PARTE 1](#parte7)     
-8. [Introdução ao Git e Github](#parte8)     
-9. [Enumerações e composição](#parte9)     
-10. [Herança e polimorfismo](#parte10)     
-11. [Tratamento de exceções](#parte11)     
-12. [Projeto: Sistema de jogo de xadrez](#parte12)     
-13. [Trabalhando com arquivos](#parte13)     
-14. [Interfaces](#parte14)     
-15. [Tópicos especiais em C# - PARTE 2](#parte15)     
-16. [Expressões lambda, delegates, LINQ](#parte16)     
-17. [Projeto: Sistema Web com ASP .NET Core MVC e Entity Framework](#parte17)     
-18. [Seção bônus](#parte18)     
+01. [Seção 01: Apresentação do curso e orientações](#parte1)     
+02. [Seção 02: Introdução a C# e .NET](#parte2)     
+03. [Seção 03: Recapitulação de Lógica de Programação usando C#](#parte3)     
+04. [Seção 04: Classes, atributos, métodos, membros estáticos](#parte4)     
+05. [Seção 05: Construtores, palavra this, sobrecarga, encapsulamento](#parte5)     
+06. [Seção 06: Comportamento de memória, arrays, listas](#parte6)     
+07. [Seção 07: Tópicos especiais em C# - PARTE 1](#parte7)     
+08. [Seção 08: Bônus: nivelamento Git e Github](#parte8)     
+09. [Seção 09: Enumerações e composição](#parte9)     
+10. [Seção 10: Herança e polimorfismo](#parte10)     
+11. [Seção 11: Tratamento de exceções](#parte11)     
+12. [Seção 12: Projeto: Sistema de jogo de xadrez](#parte12)     
+13. [Seção 13: Trabalhando com arquivos](#parte13)     
+14. [Seção 14: Interfaces](#parte14)     
+15. [Seção 15: Generics, Set, Dictionary](#parte15)     
+16. [Seção 16: Tópicos especiais em C# - PARTE 2](#parte16)     
+17. [Seção 17: Expressões lambda, delegates, LINQ](#parte17)     
+18. [Seção 18: Projeto: Sistema Web com ASP .NET Core MVC e Entity Framework](#parte18)     
+19. [Seção 19: Seção bônus](#parte19)     
 ---
 
 
-## <a name="parte1">1 - Apresentação do curso e orientações</a>
+## <a name="parte1">Seção 01: Apresentação do curso e orientações</a>
+
+
+### 1. Visão geral do curso
+
+![images\01_01_intro.png](images\01_01_intro.png)
+
+### 2. O que estudar para me tornar um desenvolvedor?
+### 3. Será que preciso fazer um curso de Lógica?
 
 
 
@@ -36,7 +45,7 @@ Curso mais didático e completo de C# e OO Projetos com UML, ASP.NET, Entity Fra
 ---
 
 
-## <a name="parte2">2 - Introdução a C# e .NET</a>
+## <a name="parte2">Seção 02: Introdução a C# e .NET</a>
 
 
 
@@ -45,7 +54,7 @@ Curso mais didático e completo de C# e OO Projetos com UML, ASP.NET, Entity Fra
 ---
 
 
-## <a name="parte3">3 - Recapitulação de Lógica de Programação usando C#</a>
+## <a name="parte3">Seção 03: Recapitulação de Lógica de Programação usando C#</a>
 
 #### 15 Tipos básicos de dados em C# - PARTE 1
 
@@ -380,7 +389,7 @@ class Program {
 ---
 
 
-## <a name="parte4">4 - Classes, atributos, métodos, membros estáticos</a>
+## <a name="parte4">Seção 04: Classes, atributos, métodos, membros estáticos</a>
 
 
 - 38 Resolvendo um problema sem orientação a objetos
@@ -607,7 +616,7 @@ CultureInfo.InvariantCulture));
 ---
 
 
-## <a name="parte5">5 - Construtores, palavra this, sobrecarga, encapsulamento</a>
+## <a name="parte5">Seção 05: Construtores, palavra this, sobrecarga, encapsulamento</a>
 
 - 51 Construtores
   - É uma operação especial da classe, que executa no momento da instanciação do objeto
@@ -1171,7 +1180,7 @@ namespace Exercicio60
 ---
 
 
-## <a name="parte6">6 - Comportamento de memória, arrays, listas</a>
+## <a name="parte6">Seção 06: Comportamento de memória, arrays, listas</a>
 
 - 63 Visão geral do capítulo
 - 64 Material de apoio do capítulo
@@ -2001,7 +2010,7 @@ namespace exerMatriz2
 ---
 
 
-## <a name="parte7">7 - Tópicos especiais em C# - PARTE 1</a>
+## <a name="parte7">Seção 07: Tópicos especiais em C# - PARTE 1</a>
 
 - 83 Visão geral do capítulo
 - 84 Material de apoio do capítulo
@@ -2382,7 +2391,7 @@ Console.WriteLine("IsNullOrWhiteSpace: " + b2);
 ---
 
 
-## <a name="parte8">8 - Introdução ao Git e Github</a>
+## <a name="parte8">Seção 08: Bônus: nivelamento Git e Github</a>
 
 - 94 Visão geral sobre esta seção bônus
 - 95 Material de apoio do capítulo
@@ -2529,7 +2538,7 @@ Comando para atualizar seu repositório local:
 ---
 
 
-## <a name="parte9">9 - Enumerações e composição</a>
+## <a name="parte9">Seção 09: Enumerações e composição</a>
 
 - 114 AVISO: conversão de string para enumeração
 
@@ -2796,7 +2805,7 @@ Solução: [9-Enumeracoes-e-composicao\solutions09\ExerProposto](/9-Enumeracoes-
 ---
 
 
-## <a name="parte10">10 - Herança e polimorfismo</a>
+## <a name="parte10">Seção 10: Herança e polimorfismo</a>
 
 - 126 Herança
 
@@ -3087,7 +3096,7 @@ Construa o programa conforme projeto ao lado. Veja exemplo na próxima página.
 [Voltar ao Índice](#indice)
 
 
-## <a name="parte11">11 - Tratamento de exceções</a>
+## <a name="parte11">Seção 11: Tratamento de exceções</a>
 
 
 
@@ -3096,7 +3105,7 @@ Construa o programa conforme projeto ao lado. Veja exemplo na próxima página.
 ---
 
 
-## <a name="parte12">12 - Projeto: Sistema de jogo de xadrez</a>
+## <a name="parte12">Seção 12: Projeto: Sistema de jogo de xadrez</a>
 
 
 
@@ -3105,7 +3114,7 @@ Construa o programa conforme projeto ao lado. Veja exemplo na próxima página.
 ---
 
 
-## <a name="parte13">13 - Trabalhando com arquivos</a>
+## <a name="parte13">Seção 13: Trabalhando com arquivos</a>
 
 
 
@@ -3114,7 +3123,7 @@ Construa o programa conforme projeto ao lado. Veja exemplo na próxima página.
 ---
 
 
-## <a name="parte14">14 - Interfaces</a>
+## <a name="parte14">Seção 14: Interfaces</a>
 
 
 
@@ -3123,7 +3132,7 @@ Construa o programa conforme projeto ao lado. Veja exemplo na próxima página.
 ---
 
 
-## <a name="parte15">15 - Tópicos especiais em C# - PARTE 2</a>
+## <a name="parte15">Seção 15: Generics, Set, Dictionary</a>
 
 
 
@@ -3132,7 +3141,7 @@ Construa o programa conforme projeto ao lado. Veja exemplo na próxima página.
 ---
 
 
-## <a name="parte16">16 - Expressões lambda, delegates, LINQ</a>
+## <a name="parte16">Seção 16: Tópicos especiais em C# - PARTE 2</a>
 
 
 
@@ -3141,7 +3150,7 @@ Construa o programa conforme projeto ao lado. Veja exemplo na próxima página.
 ---
 
 
-## <a name="parte17">17 - Projeto: Sistema Web com ASP .NET Core MVC e Entity Framework</a>
+## <a name="parte17">Seção 17: Expressões lambda, delegates, LINQ</a>
 
 
 
@@ -3150,7 +3159,7 @@ Construa o programa conforme projeto ao lado. Veja exemplo na próxima página.
 ---
 
 
-## <a name="parte18">18 - Seção bônus</a>
+## <a name="parte18">Seção 18: Projeto: Sistema Web com ASP .NET Core MVC e Entity Framework</a>
 
 
 
@@ -3159,4 +3168,12 @@ Construa o programa conforme projeto ao lado. Veja exemplo na próxima página.
 ---
 
 
+
+## <a name="parte19">Seção 19: Seção bônus</a>
+
+
+
+[Voltar ao Índice](#indice)
+
+---
 
