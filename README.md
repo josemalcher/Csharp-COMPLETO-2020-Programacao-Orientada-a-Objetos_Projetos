@@ -53,8 +53,34 @@ Curso mais didático e completo de C# e OO Projetos com UML, ASP.NET, Entity Fra
 ### 04. Visão geral do capítulo
 ### 05. Material de apoio do capítulo
 ### 06. C# e .NET
+
+![images\02_06_implementacoes.jpeg](images\02_06_implementacoes.jpeg)
+
+![images\02_06_implementacoes_comparacoes.jpeg](images\02_06_implementacoes_comparacoes.jpeg)
+
+![images\02_06_implementacoes_comparacoes_2.jpeg](images\02_06_implementacoes_comparacoes_2.jpeg)
+
+
 ### 07. Compilação e interpretação
+
+![images\02_07_comp_inter.jpeg](images\02_07_comp_inter.jpeg)
+
+![images\02_07_comp_1.jpeg](images\02_07_comp_1.jpeg)
+
+![images\02_07_interpre_1.jpeg](images\02_07_interpre_1.jpeg)
+
+![images\02_07_hibrida_1.jpeg](images\02_07_hibrida_1.jpeg)
+
+![images\02_07_interpre_1_resum.jpeg](images\02_07_interpre_1_resum.jpeg)
+
 ### 08. Estrutura de uma aplicação C#
+
+![/images/02_08_pacotes_tipos.jpeg](/images/02_08_pacotes_tipos.jpeg)
+
+![/images/02_08_2_pacotes_tipos.jpeg](/images/02_08_2_pacotes_tipos.jpeg)
+
+![/images/02_08_3_pacotes_tipos.jpeg](/images/02_08_3_pacotes_tipos.jpeg)
+
 ### 09. Instalação do Visual Studio Community
 ### 10. Primeiro programa C# no Visual Studio
 ### 11. Estrutura básica de um programa C#
