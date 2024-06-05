@@ -83,6 +83,26 @@ Curso mais didático e completo de C# e OO Projetos com UML, ASP.NET, Entity Fra
 
 ### 09. Instalação do Visual Studio Community
 ### 10. Primeiro programa C# no Visual Studio
+
+```csharp
+// See https://aka.ms/new-console-template for more information
+// Console.WriteLine("Hello, World!");
+
+using System;
+
+namespace PrimeiroProjeto // Note: actual namespace depends on the project name.
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+        }
+    }
+}
+
+```
+
 ### 11. Estrutura básica de um programa C#
 ### 12. Dicas do Visual Studio
 
